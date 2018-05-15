@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/*       */
+/* TITLE */
+/*       */
+section.title_list_area { border : 1px solid transparent;
+ position : relative;
+ float : left;
+ width : 222px;
+}
+
+div.restconf_title_1 {
+ border : 1px solid #a0a0a0;
+ background-color : #f6a973;
+ border-radius: 3px;
+
+ position : relative;
+ width : 200px;
+ height : 30px;
+ margin  : 5px auto;
+ cursor : pointer;
+ overflow : hidden;
+}
+
+div.restconf_title_1 span {
+ position : absolute;
+ top : 9px;
+ left : 30px;
+ color : #f9fff9;
+ font-size : 12px;
+ white-space: normal;
+ text-shadow : 1px 1px 1px #303030;
+}
+
+div.restconf_title_2 {
+ border : 1px solid #a0a0a0;
+ background-color : #a3b877;
+ border-radius: 3px;
+
+ position : relative;
+ width : 200px;
+ height : 30px;
+ margin  : 5px auto;
+ cursor : pointer;
+ overflow : hidden;
+}
+
+div.restconf_title_2 span {
+ position : absolute;
+ top : 9px;
+ left : 30px;
+ color : #105030;
+ font-size : 12px;
+ white-space: normal;
+ text-shadow : 1px 1px 1px #ffffff;
+}
+
+
+div.restconf_title_3 {
+ border : 1px solid #a0a0a0;
+ background-color : #7facc1;
+ border-radius: 3px;
+
+ position : relative;
+ width : 200px;
+ height : 30px;
+ margin  : 5px auto;
+ cursor : pointer;
+ overflow : hidden;
+}
+
+div.restconf_title_3 span {
+ position : absolute;
+ top : 9px;
+ left : 30px;
+ color : #103050;
+ font-size : 12px;
+ white-space: normal;
+ text-shadow : 1px 1px 1px #ffffff;
+}

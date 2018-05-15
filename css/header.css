@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/*        */
+/* header */
+/*        */
+/*
+@font-face {
+ font-family: 'julies';
+ src: url('../font/julies.ttf');
+ font-weight : normal;
+ font-style : normal;
+}
+*/
+
+header.main_header {
+ height : 60px;
+ 
+ background-image : -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(#ffffff)),
+                    url(../img/flower_64.png);
+		    
+ background-image : -moz-linear-gradient(top, rgba(255, 255, 255, 0.7), #ffffff),
+                    url(../img/flower_64.png);
+ 
+ background-image : linear-gradient(to bottom, rgba(255, 255, 255, 0.7), #ffffff),
+                    url(../img/ODL_25.png);
+ 
+ border-bottom : 1px solid #c0c0c0;
+ box-shadow : 0px 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+div.header_title {border : 1px solid transparent;
+ position : relative;
+ width : 1000px;
+ height : 60px;
+ margin : 0 auto;
+}
+
+div.header_title h1 {border : 1px solid transparent;
+ position : absolute;
+ left : 0px;
+ top  : 14px;
+ 
+ width : 500px;
+ height : 40px;
+ margin-top : 0px;
+ margin-left : 0px;
+ 
+ padding : 0px;
+}
+
+/*
+div.header_title h1 {
+ position : relative;
+ float : left;
+ width : 600px;
+ font-family : 'julies';
+ font-size : 60px;
+ font-weight : normal;
+ letter-spacing : 4px;
+ margin : 0px;
+ padding : 0px;
+}
+
+span.title1 {
+ color : #f4811f;            
+ text-shadow : 0px 0px 3px rgba(244,129,31,0.5);
+}
+
+span.title2 {
+ color : #fbb813;            
+ text-shadow : 0px 0px 3px rgba(251,184,19,0.5);
+}
+*/
+
+div.header_title nav {border : 1px solid transparent;
+ position : absolute;
+ left : 502px;
+ top : 10px;
+ 
+ width : 496px;
+ margin : 0px;
+ padding : 0px;
+}
+
+div.header_title ul {
+ list-style-type : none;
+ margin : 0px;
+ padding : 0px;
+}
+
+div.header_title li {
+ position : relative;
+ float : left;
+ margin : 8px;
+ padding : 8px;
+ border : 2px dashed #fbc823;
+ border-radius: 9px;
+ background-color : #f0f0a0;
+ font-size : 12px;
+ color : #909080;
+ text-shadow : 1px 1px 1px #ffffff;
+}
+
+div.header_title li.active_page {
+ border : 2px solid #fbc823;
+ background-color : #f8f8a8;
+ color : #808070;
+}
+
+div.header_title li a:link    {color: #909080; text-decoration:none;}
+div.header_title li a:visited {color: #909080; text-decoration:none;}
+div.header_title li a:active  {color: #ffffff; text-decoration:none; text-shadow : 1px 1px 1px #c0c0c0;}
+div.header_title li a:hover   {color: #ffffff; text-decoration:none; text-shadow : 1px 1px 1px #606060;}

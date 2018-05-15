@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+<meta charset='UTF-8'>
+<link rel='stylesheet' href='css/base.css' type='text/css'>
+<link rel='stylesheet' href='css/register.css' type='text/css'>
+<link rel='stylesheet' href='css/title.css' type='text/css'>
+<link rel='stylesheet' type='text/css' href='css/header.css'>
+<script type='text/javascript' charset='UTF-8' src='js/json2.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/jquery.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/jquery-ui.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/commonFunctions.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/register.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/getTitle.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/controleStorage.js'></script>
+<title>ODLman</title>
+</head>
+<!--<body onload='objRegister.initialize();'>-->
+<body onload='objGetTitle.writeCondition(); objGetTitle.getRestconfTitle("register"); objRegister.initialize();'>
+<header class='main_header'>
+<div class='header_title'>
+<h1><img src='img/title.png' width='172' height='40' alt='ODLman'></h1>
+<nav>
+<ul>
+<li class='active_page'>登録</li>
+<li><a href='index.html'>Restconf</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<div class='main_frame'>
+<section class='title_list_area' id='title_list_area'><h3><input type='text' style='width:140px;' value='' id='title_list_condition' placeholder='タイトルで検索'><button class='enable' onclick='objGetTitle.readCondition(); objGetTitle.getPostTitle("register");'>取得</button></h3></section>
+<section class='register_area'>
+<h2><span id='register_header_title'>-</span></h2>
+<p><button class='enable' onclick='objRegister.register();' id='register_submit_button'>新規作成</button><button class='enable' onclick='objRegister.initialize();'>初期化</button><button class='disable' id='register_delete_button'>削除</button></p>
+<p><span>id&nbsp:</span><input type='text' style='width:160px;' id='register_manual_id' value='' spellcheck='false'></p>
+<article class='title_area'><h3>タイトル</h3><p><input type='text' style='width:320px;' value='' id='register_title' onblur='objRegister.changeTitle();' spellcheck='false'></p></article>
+<article class='method_area'><h3>Method</h3><p><input type='radio' id='register_method-1' value='1' name='register_method' onchange='objRegister.changeMethod(1);'><label for='register_method-1'>GET</label><input type='radio' id='register_method-2' value='2' name='register_method' onchange='objRegister.changeMethod(2);' checked><label for='register_method-2'>PUT</label><input type='radio' id='register_method-3' value='3' name='register_method' onchange='objRegister.changeMethod(3);'><label for='register_method-3'>POST</label></p></article>
+<article class='url_area'><h3>URL</h3><p><span>http://XXXXXX:8181/</span><input type='text' style='width:800px;' value='' id='register_url' onblur='objRegister.changeUrl(); objRegister.makeInputKeyDstalist();' spellcheck='false'></p></article>
+<article class='json_area' id='register_json_zone'><h3><span>JSON&nbsp;or&nbsp;XML</span><img src='img/add.png' width='16' height='16' alt='add' class='onclick_node' onclick='objRegister.addJsonZone();'></h3><div class='json_zone' id='register_json-default'><p><input type='checkbox' value='1' id='register_jsonRepeat-default' onchange='objRegister.changeJsonRepeatType("default");'><label class='checkbox1' for='register_jsonRepeat-default'>繰り返す</label></p><p><textarea style='width:364px; height:242px;' id='register_jsonText-default' onblur='objRegister.changeJsonText("default"); objRegister.makeInputKeyDstalist();' spellcheck='false'></textarea></p></div></article>
+<article class='input_area' id='register_group_zone'><h3><span>入力欄グループ</span><datalist id='register_datalist_options'></datalist><img src='img/add.png' width='16' height='16' alt='add' class='onclick_node' onclick='objRegister.addGroupZone(); objRegister.ddInputList();'></h3><div class='group_zone' id='register_group-default'><h3><span>デフォルトの入力欄</span><img src='img/add.png' width='16' height='16' alt='add' class='onclick_node' onclick='objRegister.addInputZone(); objRegister.ddInputList();'></h3></div></article>
+</section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+<meta charset='UTF-8'>
+<link rel='stylesheet' href='css/base.css' type='text/css'>
+<link rel='stylesheet' href='css/restconf.css' type='text/css'>
+<link rel='stylesheet' href='css/title.css' type='text/css'>
+<link rel='stylesheet' type='text/css' href='css/header.css'>
+<script type='text/javascript' charset='UTF-8' src='js/json2.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/jquery.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/jquery-ui.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/commonFunctions.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/restconf.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/getTitle.js'></script>
+<script type='text/javascript' charset='UTF-8' src='js/controleStorage.js'></script>
+<title>ODLman</title>
+</head>
+<body onload='objGetTitle.writeCondition(); objGetTitle.getRestconfTitle("restconf"); objRestconf.writeDataList(); objRestconf.makeDatalist();'>
+<header class='main_header'>
+<div class='header_title'>
+<h1><img src='img/title.png' width='172' height='40' alt='ODLman'></h1>
+<nav>
+<ul>
+<li><a href='register.html'>登録</a></li>
+<li class='active_page'>Restconf</li>
+</ul>
+</nav>
+</div>
+</header>
+
+<div class='main_frame'>
+<section class='title_list_area' id='title_list_area'><h3><input type='text' size='16' value='' id='title_list_condition' placeholder='タイトルで検索'><button class='enable' onclick='objGetTitle.readCondition(); objGetTitle.getPostTitle("construct");'>取得</button></h3></section>
+<section class='input_area'>
+<h2><span id='restconf_title'>-</span></h2><p><button class='enable' onclick='objRestconf.restconf();' id='restconf_submit_button'>PUT</button><button class='enable' id='restconf_delete_button' onclick='objRestconf.deleteOdlData();'>DELETE</button></p>
+<article><h3>入力候補作成</h3><textarea cols='80' rows='3' id='restconf_datalist_elements' onblur='objRestconf.readDataList(); objRestconf.makeDatalist();' placeholder='値,表示名' spellcheck='false'></textarea><datalist id='restconf_datalist_options'></datalist></article>
+<article><h3>データ入力</h3><div id='restconf_input_area'></div></article>
+</section>
+</div>
+
+</body>
+</html>
